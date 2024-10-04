@@ -13,4 +13,5 @@ To close down one storage facilities
 3. Provide analytic insights and data-driven recommendations.
 ## Tools used 
 SQL, Visual studio code.
-
+## Data Exploration
+Inorder to d
