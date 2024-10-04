@@ -85,3 +85,4 @@ JOIN products p ON w.warehouseCode = p.warehouseCode
 JOIN orderdetails od ON p.productCode = od.productCode
 GROUP BY w.warehouseName, p.productName
 ORDER BY totalSold DESC;
+SELECT * FROM offices;
