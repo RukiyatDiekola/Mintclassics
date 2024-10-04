@@ -16,5 +16,5 @@ SQL, Visual studio code.
 ## Data Exploration
 This is crucial step that enable us to understand the data available in MintClassics Database. 
 The image below shows the overall table available in the database 
-![Screenshot of result of query.](C:\Users\USER\OneDrive - University of Wolverhampton\Desktop\mintclassics\Mintclassics\Tables.PNG)
+![Screenshot](C:\Users\USER\OneDrive - University of Wolverhampton\Desktop\mintclassics\Mintclassics\Tables.PNG)
 
