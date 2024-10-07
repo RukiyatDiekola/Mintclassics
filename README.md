@@ -26,7 +26,7 @@ Now that we know the tables available in the database, lets go deeper by explori
 ## INVENTORY ANALYSIS
 To explore the products in inventory, information about the products, warehouses, and potentially orderdetails tables are needed. 
 
-![Screenshot](Inventory%analysis.PNG)
+![Screenshot](InventoryAnalysis.PNG)
 
 The screenshot below determined the Number of orders from each warehouse
 ![Screenshot](OrdersPerWarehouse.PNG)
