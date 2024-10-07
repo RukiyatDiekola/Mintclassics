@@ -28,3 +28,4 @@ To explore the products in inventory, information about the products, warehouses
 ![Screenshot](Inventory analysis.PNG)
 
 The screenshot below determined the Number of orders from each warehouse
+![Screenshot](OrdersPerWarehouse.PNG)
