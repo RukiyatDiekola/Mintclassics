@@ -16,5 +16,15 @@ SQL, Visual studio code.
 ## Data Exploration
 This is crucial step that enable us to understand the data available in MintClassics Database. 
 The image below shows the overall table available in the database 
+
 ![Screenshot](Tables.PNG)
 
+Now that we know the tables available in the database, lets go deeper by exploring the warehouse table 
+
+![Screenshot](Warehouses.PNG)
+
+## INVENTORY ANALYSIS
+To explore the products in inventory, information about the products, warehouses, and potentially orderdetails tables are needed. 
+![Screenshot](Inventory analysis.PNG)
+
+The screenshot below determined the Number of orders from each warehouse
