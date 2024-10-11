@@ -11,7 +11,8 @@ SELECT * FROM products;
 SELECT p.productCode, p.productName, p.productDescription, p.quantityInStock, w.warehouseName
 FROM products p
 JOIN warehouses w ON p.warehouseCode = w.warehouseCode
-WHERE p.quantityInStock > 0;
+WHERE p.quantityInStock > 0
+ORDER BY p.`quantityInStock`;
 -- Retrieve sales volume for each product by warehouse, this enables us to know which
 --- products is more popular and from which warehouse is it being shipped from. 
 ---The least performing warehouse may be a good option for closure
@@ -30,7 +31,7 @@ SHOW TABLES
 
 
 --- TO know the number of orders from each warehouses
-SELECT w.warehouseName, COUNT(DISTINCT o.orderNumber) AS totalOrders
+SELECT w.warehouseName, COUNT(o.orderNumber) AS totalOrders
 FROM warehouses w
 JOIN products p ON w.warehouseCode = p.warehouseCode
 JOIN orderdetails od ON p.productCode = od.productCode
@@ -38,12 +39,18 @@ JOIN orders o ON od.orderNumber = o.orderNumber
 GROUP BY w.warehouseName;
 
 -- Identify low-performing products (products with high stock and low sales)
-SELECT p.productCode, p.productName, p.quantityInStock, SUM(od.quantityOrdered) AS totalSold
+SELECT p.productCode, p.productName, p.quantityInStock, SUM(od.quantityOrdered) AS totalSold, w.warehouseName
 FROM products p
 LEFT JOIN orderdetails od ON p.productCode = od.productCode
+JOIN warehouses w ON p.warehouseCode = w.warehouseCode
 GROUP BY p.productCode
-HAVING totalSold < 700 -- threshold for low-performing products
-ORDER BY totalSold ASC;
+ORDER BY p.`quantityInStock` ASC;
+
+-- To know the total quantity currently in stock in each warehouse
+SELECT w.warehouseName, SUM(p.quantityInStock) AS totalStock
+FROM warehouses w
+JOIN products p ON w.warehouseCode = p.warehouseCode
+GROUP BY w.warehouseName;
 
 SELECT p.productCode, p.productName, p.quantityInStock, 
        COALESCE(SUM(od.quantityOrdered), 0) AS totalSold
