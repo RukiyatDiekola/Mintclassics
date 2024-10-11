@@ -30,3 +30,9 @@ To explore the products in inventory, information about the products, warehouses
 
 The screenshot below determined the Number of orders from each warehouse
 ![Screenshot](OrdersPerWarehouse.PNG)
+
+The screenshots below was used to retrieve the low performing stock and the storage for this low performing stock.
+![Screenshot](LowPerformingStock.PNG)
+
+![Screenshot](StorageForLPS.PNG)
+
