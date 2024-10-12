@@ -96,4 +96,4 @@ SELECT * FROM orderdetails;
 
 SHOW TABLES
 
-SELECT * FROM products
+SELECT * FROM orderdetails
